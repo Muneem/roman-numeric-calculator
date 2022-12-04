@@ -19,12 +19,12 @@ export const numbersToRoman = (value: number) => {
         return "Enter a number between 1 and 1000";
 
     let roman = "";
-    for (let key in romanNumList) {
-        let quotient = Math.floor(value / romanNumList[key]);
+    for (const key in romanNumList) {
+        let quotient = Math.floor(value / romanNumList[key as keyof typeof romanNumList]);
         for (let i = 0; i < quotient; i++) {
             roman += key;
         }
-        value = value % romanNumList[key];
+        value = value % romanNumList[key as keyof typeof romanNumList];
     }
 
     return roman;

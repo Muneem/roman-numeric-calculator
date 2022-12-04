@@ -1,3 +1,4 @@
+import React from "react";
 import styles from '@/pages/index.module.css'
 import {useState} from "react";
 import {numbersToRoman} from "../utils/numbers-to-roman";
@@ -5,9 +6,9 @@ import {numbersToRoman} from "../utils/numbers-to-roman";
 export default function Home() {
     const [romanValue, setRomanValue] = useState('');
 
-    const handleOnChange = (e) => {
+    const handleOnChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         if(e.target.value) {
-            setRomanValue(numbersToRoman(e.target.value));
+            setRomanValue(numbersToRoman(parseInt(e.target.value)));
         }
         else {
             setRomanValue('');
