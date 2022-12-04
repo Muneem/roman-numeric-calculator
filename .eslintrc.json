@@ -1,6 +1,11 @@
 {
   "root": true,
-  "extends": ["next/core-web-vitals"],
+  "extends": [
+    "next/core-web-vitals",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    "plugin:@typescript-eslint/strict"
+  ],
   "plugins": ["testing-library"],
   "overrides": [
     // Only uses Testing Library lint rules in test files
@@ -11,5 +16,8 @@
       ],
       "extends": ["plugin:testing-library/react"]
     }
-  ]
+  ],
+  "parserOptions": {
+    "project": ["./tsconfig.json"]
+  }
 }
