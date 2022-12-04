@@ -1,11 +1,10 @@
-# Next.js + Jest
+# Roman Numeral calculator 
 
-This example shows how to configure Jest to work with Next.js.
+# Introduction
+This is the coding exercise for Roman numeral calculator
 
-This includes Next.js' built-in support for Global CSS, CSS Modules and TypeScript.
 
-## How to Use
-
+# Getting Started
 Quickly get started using [Create Next App](https://github.com/vercel/next.js/tree/canary/packages/create-next-app#readme)!
 
 In your terminal, run the following command:
@@ -22,8 +21,15 @@ yarn create next-app --example with-jest with-jest-app
 pnpm create next-app --example with-jest with-jest-app
 ```
 
-## Run Jest Tests
+## Development server
 
-```bash
-npm test
-```
+Run `npm run start` for a dev server. Navigate to `http://localhost:3000/`. The app will automatically reload if you change any of the source files.
+
+
+## Build
+
+Run `npm run build` to build the project. The build artifacts will be stored in the `.next/static/chunks/pages` directory.
+
+## Running unit tests
+
+Run `npm run test` to execute the unit tests Jest.
